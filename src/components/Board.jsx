@@ -109,7 +109,12 @@ export default function Board() {
   return (
     <>
       <h1 style={{ textDecoration: "underline" }}>2 Player - Tic Tac Toe</h1>
-      <h2>Current Player: {currentPlayer ? "X" : "0"}</h2>
+      <h2>
+        Current Player:{" "}
+        <span style={currentPlayer ? { color: "red" } : { color: "blue" }}>
+          {currentPlayer ? "X" : "0"}
+        </span>
+      </h2>
       <div
         className="board"
         style={

@@ -11,10 +11,6 @@ export default function MatchResultDialog({ isOpen, setIsOpen, result }) {
     if (reason && reason === "backdropClick" && "escapeKeyDown") return;
     setIsOpen(false);
   };
-  const endGame = () => {
-    setIsOpen(false);
-    window.close();
-  };
   const playAgain = () => {
     setIsOpen(false);
     window.location.reload();
@@ -35,7 +31,6 @@ export default function MatchResultDialog({ isOpen, setIsOpen, result }) {
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={endGame}>End Game</Button>
           <Button onClick={playAgain} autoFocus>
             Play Again
           </Button>
